@@ -8,6 +8,9 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/Telegram/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Telegram/app/src/main/res/layout/fragment_chats.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Telegram/app/src/main/res/layout/fragment_settings.xml" value="0.2957427536231884" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.12817028985507245" />
+        <entry key="app/src/main/res/layout/fragment_base.xml" value="0.12817028985507245" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.22" />
       </map>
     </option>
   </component>
