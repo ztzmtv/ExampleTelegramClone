@@ -4,8 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.azmetov.telegram.databinding.ActivityMainBinding
-import com.azmetov.telegram.ui.objects.AppDrawer
 import com.azmetov.telegram.ui.fragments.ChatsFragment
+import com.azmetov.telegram.ui.objects.AppDrawer
 
 
 class MainActivity : AppCompatActivity() {
