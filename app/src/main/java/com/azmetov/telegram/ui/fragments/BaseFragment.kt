@@ -8,14 +8,11 @@ import androidx.fragment.app.Fragment
 
 open class BaseFragment(var layout: Int) : Fragment() {
 
-    private lateinit var mRootView:View
+    private lateinit var mRootView: View
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-       mRootView = inflater.inflate(layout,container,false)
+        mRootView = inflater.inflate(layout, container, false)
         return mRootView
     }
 
