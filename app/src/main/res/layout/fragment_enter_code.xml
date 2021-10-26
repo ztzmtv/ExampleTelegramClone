@@ -57,6 +57,6 @@
         android:textSize="@dimen/normalText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/register_image" />
+        app:layout_constraintTop_toBottomOf="@id/register_text_we_send" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

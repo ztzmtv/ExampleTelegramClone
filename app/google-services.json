@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1058626146928",
+    "project_id": "telegram-cbfd0",
+    "storage_bucket": "telegram-cbfd0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058626146928:android:14ce981cd214c3dcdf5ab5",
+        "android_client_info": {
+          "package_name": "com.azmetov.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058626146928-emmn5hngukgnbql5vgiknhf0lvfham33.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUzwTiKSY8uhj_cHwwZ3SIeMkPJZKklFc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1058626146928-emmn5hngukgnbql5vgiknhf0lvfham33.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar
 import com.azmetov.telegram.R
 import com.azmetov.telegram.databinding.ActivityRegisterBinding
 import com.azmetov.telegram.ui.fragments.EnterPhoneNumberFragment
+import com.azmetov.telegram.utilites.replaceFragment
 
 private lateinit var mBinding: ActivityRegisterBinding
 private lateinit var mToolBar: Toolbar
@@ -23,10 +24,7 @@ class RegisterActivity : AppCompatActivity() {
         mToolBar = mBinding.registerToolbar
         setSupportActionBar(mToolBar)
         title = getString(R.string.register_title_your_phone)
-        supportFragmentManager.beginTransaction()
-            .add(R.id.registerDataContainer, EnterPhoneNumberFragment())
-            .commit()
 
-
+        replaceFragment(EnterPhoneNumberFragment())
     }
 }

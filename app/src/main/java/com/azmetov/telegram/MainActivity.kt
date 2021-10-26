@@ -1,6 +1,5 @@
 package com.azmetov.telegram
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -8,6 +7,8 @@ import com.azmetov.telegram.activities.RegisterActivity
 import com.azmetov.telegram.databinding.ActivityMainBinding
 import com.azmetov.telegram.ui.fragments.ChatsFragment
 import com.azmetov.telegram.ui.objects.AppDrawer
+import com.azmetov.telegram.utilites.replaceActivity
+import com.azmetov.telegram.utilites.replaceFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -36,14 +37,9 @@ class MainActivity : AppCompatActivity() {
         if (false) {
             setSupportActionBar(mToolBar)
             mAppDrawer.create()
-            supportFragmentManager
-                .beginTransaction()
-                .replace(R.id.dataContainer, ChatsFragment())
-                .commit()
-
+            replaceFragment(ChatsFragment())
         } else {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
+            replaceActivity(RegisterActivity())
         }
     }
 
