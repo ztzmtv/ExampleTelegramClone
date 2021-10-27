@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1058626146928-bmeld4ogthvubgc7nn4bkgkspar5n4ir.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.azmetov.myapplication",
+            "certificate_hash": "64c75a75c693bff6dfb954c8b6b54210dc6a170d"
+          }
+        },
+        {
           "client_id": "1058626146928-emmn5hngukgnbql5vgiknhf0lvfham33.apps.googleusercontent.com",
           "client_type": 3
         }

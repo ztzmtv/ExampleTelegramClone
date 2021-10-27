@@ -7,14 +7,17 @@ import com.azmetov.telegram.activities.RegisterActivity
 import com.azmetov.telegram.databinding.ActivityMainBinding
 import com.azmetov.telegram.ui.fragments.ChatsFragment
 import com.azmetov.telegram.ui.objects.AppDrawer
+import com.azmetov.telegram.utilites.AUTH
 import com.azmetov.telegram.utilites.replaceActivity
 import com.azmetov.telegram.utilites.replaceFragment
+import com.google.firebase.auth.FirebaseAuth
 
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mBinding: ActivityMainBinding
     private lateinit var mAppDrawer: AppDrawer
     private lateinit var mToolBar: Toolbar
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,13 +34,14 @@ class MainActivity : AppCompatActivity() {
     private fun initFields() {
         mToolBar = mBinding.mainToolbar
         mAppDrawer = AppDrawer(this, mToolBar)
+        AUTH = FirebaseAuth.getInstance()
     }
 
     private fun initFunc() {
-        if (false) {
+        if (AUTH.currentUser != null) {
             setSupportActionBar(mToolBar)
             mAppDrawer.create()
-            replaceFragment(ChatsFragment())
+            replaceFragment(ChatsFragment(), false)
         } else {
             replaceActivity(RegisterActivity())
         }
