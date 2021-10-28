@@ -9,10 +9,7 @@ import com.azmetov.telegram.MainActivity
 import com.azmetov.telegram.R
 import com.azmetov.telegram.activities.RegisterActivity
 import com.azmetov.telegram.databinding.FragmentEnterCodeBinding
-import com.azmetov.telegram.utilites.AUTH
-import com.azmetov.telegram.utilites.AppTextWatcher
-import com.azmetov.telegram.utilites.replaceActivity
-import com.azmetov.telegram.utilites.showToast
+import com.azmetov.telegram.utilites.*
 import com.google.firebase.auth.PhoneAuthProvider
 
 
@@ -38,8 +35,25 @@ class EnterCodeFragment(val phoneNumber: String, val id: String) :
         val credential = PhoneAuthProvider.getCredential(id, code)
         AUTH.signInWithCredential(credential).addOnCompleteListener { task ->
             if (task.isSuccessful) {
-                showToast("Добро пожаловать")
-                (activity as RegisterActivity).replaceActivity(MainActivity())
+                val uid = AUTH.currentUser?.uid.toString()
+                val dataMap = mutableMapOf<String, Any>()
+                dataMap[CHILD_ID] = uid
+                dataMap[CHILD_PHONE] = phoneNumber
+                dataMap[CHILD_USERNAME] = uid
+                REF_DATABASE_ROOT
+                    .child(NODE_USERS)
+                    .child(uid)
+                    .updateChildren(dataMap)
+                    .addOnCompleteListener { task2 ->
+                        if (task2.isSuccessful) {
+                            showToast("Добро пожаловать")
+                            (activity as RegisterActivity).replaceActivity(MainActivity())
+                        } else {
+                            showToast(task2.exception?.message.toString())
+                        }
+                    }
+
+
             } else showToast(task.exception?.message.toString())
         }
     }
